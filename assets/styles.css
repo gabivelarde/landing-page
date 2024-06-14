@@ -84,9 +84,13 @@ main{
     width: 50%;
 }
 .hero-infor h1{
+    
     font-size: 48px;
     font-weight: 800;
     color: var(--text_white);
+    background: linear-gradient(#22c1c3, #fdbb2d);
+    color: transparent;
+    background-clip: text;
 }
 .hero-infor p{
     font-size: 14px;
@@ -144,12 +148,14 @@ main{
     width: 100%;
     height: 60px;
     background-color: var(--nav-bg);
+    background: linear-gradient(var(--nav-bg), #1e3c41);
     display: flex;
     justify-content:center;
     align-items: center;
     gap: 20px;
     position: sticky;
-    top: 0;
+    top: 0%;
+
 }
 #info-niveles {
     max-width: var(--max-width);
@@ -248,4 +254,97 @@ footer {
 .link-system {
     font-weight: 800;
     color: var(--text_white);
+}
+
+#menu-toggle,
+.menu-label {
+    display: none;
+}
+
+/*--------------------------------*/
+/*===========Mediaqueries=========*/
+/*--Responsive Design para Tablets y Notebooks-*/
+@media (max-width: 992px ) {
+    header {
+        background: linear-gradient(#121e3c, var(--background));
+        position: fixed;
+        width: 100%;
+    }
+        
+    .navbar-list {
+        gap: 30px;
+    }
+
+    .navbar-list {
+        position: absolute;
+        top: 65px;
+        left: 5%;
+        right: 5%;
+        flex-direction: column;
+        width: 90%;
+        background: var(--nav-bg);
+        border: 1px solid var(--bg-white);
+        border-top: 0;
+        border-radius: 0px 0px 15px 15px;
+        gap: 25px;
+        padding: 45px 0;
+        display: none;
+    }
+
+    .navbar-list a{
+        font-size: 1.2rem;
+    }
+
+    .menu-label{
+        display: flex;
+        order: 2;
+    }
+
+    .menu-label img{
+        width: 25px;
+        height: 20px;
+    }
+
+    
+    /*abrir el menu hamburguesa*/
+    #menu-toggle:checked+.navbar-list{
+        display: flex;
+    }
+    /*hero portada*/
+    .hero-infor{
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 70px;
+    }
+    
+    .hero-infor h1 {
+        max-width: 500px;
+    }
+
+    .hero-infor p {
+        max-width: 600px;
+    }
+
+    .hero-portada {
+        display: none;
+    }
+    /*-----------info niveles ----------------*/
+    .infor-card-conteiner {
+    /*max-width: 70%;*/
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+.infor-card-seg {
+    /*max-width: 70%;*/
+    flex-wrap:wrap ;
+    justify-content: center;
+}
+#caja {    
+position: sticky;
+    top: 60px;
+
+}
 }
