@@ -32,6 +32,9 @@ header {
     padding: 0 30px;
     height: 65px;
 }
+header a {
+    height: 80%;
+}
 .navbar{
     display: flex;
     align-items: center;
@@ -43,7 +46,7 @@ header {
     justify-content: center;
 }
 .logo{
-    height: 40%;
+    height: 100%;
 }
 
 .navbar{
@@ -227,6 +230,13 @@ main{
     padding: 5px 25px;
     font-size: 14px;
 }
+.card-nivel p{
+    padding: 20px;
+}
+
+.infor-card-segniv p{
+    padding: 20px;
+}
 /*=======F O O T E R ===========*/
 footer {
     color: var(--text_white);
@@ -317,7 +327,7 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 40px;
-        padding: 70px;
+        padding: 20px;
     }
     
     .hero-infor h1 {
@@ -336,15 +346,45 @@ footer {
     /*max-width: 70%;*/
     flex-wrap:wrap ;
     justify-content: center;
-}
-.infor-card-seg {
+    }
+    
+    .card-nivel p{
+        padding: 20px;
+    }
+
+    .infor-card-segniv p{
+        padding: 20px;
+    }
+
+    .infor-card-seg {
     /*max-width: 70%;*/
     flex-wrap:wrap ;
     justify-content: center;
-}
-#caja {    
-position: sticky;
+    }
+    
+    #caja {    
+    position: sticky;
     top: 60px;
+}
 
 }
+
+/*--Responsive Design para CELULARES-*/
+@media (max-width: 576px) {
+    .card-nivel{
+        width: 100%;
+        left: 0;
+    }
+    .card-nivel p{
+        padding: 20px;
+    }
+
+    .infor-card-seg{
+        width: 100%;
+        left: 0;
+    }
+    .infor-card-seg p{
+        padding: 20px;
+    }
+
 }
